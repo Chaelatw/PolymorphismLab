@@ -1,11 +1,11 @@
 public class Cat extends Pet{
 
-    public Cat(String name, String speak) {
-        super(name, speak);
+    public Cat(String name) {
+        super(name);
     }
 
     @Override
     public void Speak() {
-        super.Speak();
+        System.out.println("Meow");;
     }
 }

@@ -5,39 +5,28 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("How many pets do you have? ");
+        int petCount = scanner.nextInt();
+        scanner.nextLine();
 
-//        Scanner pets = new Scanner(System.in);
-//        System.out.println("How many pets do you have?");
+        List<Pet> pets = new ArrayList<>();
+
+        for (int x = 0; x < petCount; x++) {
+            System.out.print("Enter pet type: ");
+            String type = scanner.nextLine();
+            System.out.print("Enter pet name: ");
+            String name = scanner.nextLine();
+
 //
-//        String numPets = pets.nextLine();
-//        System.out.println("What are each of their names");
+//        listOfPets.add( new Dog("Dave"));
+//        listOfPets.add(new Cat("Steve"));
+//        PetsComparator petComparator = new PetsComparator();
+//        Collections.sort(listOfPets, petComparator);
 //
-//        String petName = pets.nextLine();
-//
-//        System.out.println("What kind of pet are each of them?");
-//
-//
-//        String petType = pets.nextLine();
-//
-//        if (petType == "dog"){
-//            Dog dog = new Dog(petName, "bark");
-//            dog.Speak();
-//        }  else if(petType == "cat") {
-//            Cat cat = new Cat(petName,"meow");
-//            cat.Speak();
+//        for (Pet p: listOfPets){
+//            System.out.println(p);
 //        }
-
-        List<Pet> listOfPets = new ArrayList<>();
-
-        listOfPets.add( new Dog("Dave","Bark"));
-        listOfPets.add(new Cat("Steve","Meow"));
-        PetsComparator petComparator = new PetsComparator();
-        Collections.sort(listOfPets, petComparator);
-
-        for (Pet p: listOfPets){
-            System.out.println(p);
-        }
-
 
 
 //        System.out.println("You have " + numPets + " "+ "pets");
@@ -45,6 +34,6 @@ public class Main {
 //        System.out.println(petName + " are these kind of pets: " + petType);
 
 
-
+        }
     }
 }
